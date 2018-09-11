@@ -3,6 +3,9 @@ version: "3.7"
 services:
   web:
     image: 2hog/docker-training-samples-micro-flask
+    init: true
+    deploy:
+      replicas: 1
     environment:
       AUTH_USER: ${AUTH_USER:-antonis}
       AUTH_PASSWORD: ${AUTH_USER:-kalipetis}

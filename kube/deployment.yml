@@ -26,4 +26,3 @@ spec:
           value: "antonis"
         - name: AUTH_PASSWORD
           value: "kalipetis"
-      restartPolicy: Always

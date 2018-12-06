@@ -28,6 +28,12 @@ spec:
               name: docker-training-samples-micro-flask-config
               key: environment
         - name: AUTH_USER
-          value: "antonis"
+          valueFrom:
+            secretKeyRef:
+              name: docker-training-samples-micro-flask-secret
+              key: auth_user
         - name: AUTH_PASSWORD
-          value: "kalipetis"
+          valueFrom:
+            secretKeyRef:
+              name: docker-training-samples-micro-flask-secret
+              key: auth_password

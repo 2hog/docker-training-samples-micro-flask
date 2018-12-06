@@ -25,6 +25,9 @@ docker stack deploy -c docker-compose.yml docker-training-samples-micro-flask
 ### Kubernetes
 
 ```sh
+kubectl create secret generic docker-training-samples-micro-flask-secret \
+--from-literal=auth_user=speak \
+--from-literal=auth_password=easy
 kubectl apply -f kube/
 ```
 

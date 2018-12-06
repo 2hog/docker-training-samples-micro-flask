@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-training-samples-micro-flask
+  labels:
+    app: docker-training-samples-micro-flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-training-samples-micro-flask
+  template:
+    metadata:
+      labels:
+        app: docker-training-samples-micro-flask
+    spec:
+      containers:
+      - name: docker-training-samples-micro-flask
+        image: 2hog/docker-training-samples-micro-flask
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+        env:
+        - name: AUTH_USER
+          value: "antonis"
+        - name: AUTH_PASSWORD
+          value: "kalipetis"

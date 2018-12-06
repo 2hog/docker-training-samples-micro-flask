@@ -4,3 +4,4 @@ metadata:
   name: docker-training-samples-micro-flask-config
 data:
   environment: training
+  

@@ -22,6 +22,11 @@ spec:
         - containerPort: 5000
           protocol: TCP
         env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: docker-training-samples-micro-flask-config
+              key: environment
         - name: AUTH_USER
           value: "antonis"
         - name: AUTH_PASSWORD

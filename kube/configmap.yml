@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: docker-training-samples-micro-flask-config
+data:
+  environment: training
+  

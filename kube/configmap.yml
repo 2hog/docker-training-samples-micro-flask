@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
   name: docker-training-samples-micro-flask-config
 data:
-  environment: training
+  environment: "training"
+  debug: "false"
   

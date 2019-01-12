@@ -62,6 +62,21 @@ kubectl create secret generic docker-training-samples-micro-flask-secret \
 kubectl apply -f kube/
 ```
 
+## Development
+
+To develop the Flask Sample Microservice, follow these steps:
+
+1. Install Docker ([docs](https://docs.docker.com/install/)) and Docker Compose ([docs](https://docs.docker.com/compose/install/))
+2. Clone this repository:
+    ```
+    git clone https://github.com/2hog/docker-training-samples-micro-flask
+    ```
+3. Launch the app with Docker Compose:
+    ```
+    docker-compose up
+    ```
+4. Open your repository with your editor and rock n' roll!
+
 ## License
 
 This software is [MIT licensed](LICENSE).

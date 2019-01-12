@@ -11,7 +11,7 @@ services:
       DEBUG: ${DEBUG:-false}
     secrets:
       - auth_user
-      - auth_passwords
+      - auth_password
 
 secrets:
   auth_user:
@@ -20,4 +20,4 @@ secrets:
 
   auth_password:
     external: true
-    name: micro-flask-auth-user
+    name: micro-flask-auth-password

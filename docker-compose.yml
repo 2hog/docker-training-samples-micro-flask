@@ -7,5 +7,17 @@ services:
     deploy:
       replicas: 1
     environment:
-      AUTH_USER: ${AUTH_USER:-antonis}
-      AUTH_PASSWORD: ${AUTH_USER:-kalipetis}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      DEBUG: ${DEBUG:-false}
+    secrets:
+      - auth_user
+      - auth_password
+
+secrets:
+  auth_user:
+    external: true
+    name: micro-flask-auth-user
+
+  auth_password:
+    external: true
+    name: micro-flask-auth-password

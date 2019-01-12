@@ -1,3 +1,5 @@
 <h1>{{ greeting }}, trainee!</h1>
 <p>This is a simple Flask microservice that we wrote for you.</p>
+{% if debug %}
 <p><small>Environment: <code>{{ environment }}</code></small></p>
+{% endif %}

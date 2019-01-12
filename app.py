@@ -5,9 +5,10 @@ from flask import render_template
 import sec
 
 
-ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
 AUTH_USER = sec.load("AUTH_USER", "antonis")
 AUTH_PASSWORD = sec.load("AUTH_PASSWORD", "kalipetis")
+DEBUG = True if os.getenv("DEBUG", 'false').lower() == 'true' else False
+ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
 
 app = Flask(__name__)
 
@@ -21,6 +22,7 @@ def home():
     context = {
         'greeting': greeting,
         'environment': ENVIRONMENT,
+        'debug': DEBUG,
     }
 
     if username != AUTH_USER or password != AUTH_PASSWORD:

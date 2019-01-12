@@ -35,7 +35,7 @@ The Flask Sample Microservice also accepts and prefers configuration for `AUTH_U
 
 ## Deployment
 
-## Docker
+### Docker
 
 ```sh
 docker run -d \

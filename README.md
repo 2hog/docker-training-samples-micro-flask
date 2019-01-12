@@ -48,6 +48,8 @@ docker run -d \
 ### Docker Swarm
 
 ```sh
+docker secret create micro-flask-auth-user -
+docker secret create micro-flask-auth-password -
 docker stack deploy -c docker-compose.yml docker-training-samples-micro-flask
 ```
 

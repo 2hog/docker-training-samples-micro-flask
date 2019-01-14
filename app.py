@@ -10,7 +10,7 @@ AUTH_PASSWORD = sec.load("AUTH_PASSWORD", "kalipetis")
 DEBUG = True if os.getenv("DEBUG", "false").lower() == "true" else False
 ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
 
-os.env["FLASK_ENV"] = "development" if DEBUG else ENVIRONMENT
+os.environ["FLASK_ENV"] = "development" if DEBUG else ENVIRONMENT
 
 app = Flask(__name__)
 

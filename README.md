@@ -22,8 +22,8 @@ The Flask Sample Microservice accepts configuration via environment variables:
 
 - `AUTH_USER`: The username to use for Basic Authentication (default: `antonis`)
 - `AUTH_PASSWORD`: The password to use for Basic Authentication (default: `kalipetis`)
-- `DEBUG`: Enable debugging mode and print environment information (default: `false`)
-- `ENVIRONMENT`: Environment in which the application runs (default: `production`)
+- `DEBUG`: Enable debugging mode and print environment information (default: `0` in production, `1` in development)
+- `ENVIRONMENT`: Environment in which the application runs (default: `production` in production, `development` in development)
 
 ## Secrets
 

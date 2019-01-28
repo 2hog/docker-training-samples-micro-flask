@@ -8,15 +8,10 @@ services:
         pipenv_mode: dev
     environment:
       ENVIRONMENT: ${ENVIRONMENT:-development}
-      DEBUG: ${DEBUG:-true}
+      FLASK_DEBUG: ${DEBUG:-1}
       AUTH_USER: ${AUTH_USER:-antonis}
       AUTH_PASSWORD: ${AUTH_PASSWORD:-kalipetis}
     volumes:
       - .:/usr/src/app
     ports:
       - ${FLASK_MICRO_EXTERNAL_PORT:-5000}:5000
-
-networks:
-  default:
-    name: flask-micro-dev
-    driver: bridge

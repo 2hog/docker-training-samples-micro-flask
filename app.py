@@ -7,10 +7,9 @@ import sec
 
 AUTH_USER = sec.load("AUTH_USER", "antonis")
 AUTH_PASSWORD = sec.load("AUTH_PASSWORD", "kalipetis")
-DEBUG = True if os.getenv("DEBUG", "false").lower() == "true" else False
-ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
 
-os.environ["FLASK_ENV"] = "development" if DEBUG else ENVIRONMENT
+DEBUG = os.getenv("FLASK_DEBUG") == "1"
+ENVIRONMENT = os.getenv("FLASK_ENV", "development")
 
 app = Flask(__name__)
 

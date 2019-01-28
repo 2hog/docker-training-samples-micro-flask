@@ -7,8 +7,8 @@ services:
     deploy:
       replicas: 1
     environment:
-      ENVIRONMENT: ${ENVIRONMENT:-production}
-      DEBUG: ${DEBUG:-false}
+      FLASK_ENV: ${ENVIRONMENT:-production}
+      FLASK_DEBUG: ${DEBUG:-0}
     secrets:
       - auth_user
       - auth_password
